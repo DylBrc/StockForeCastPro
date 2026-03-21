@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-
     <style>
         :root { 
             --bg-main: #f4f1ea; 
@@ -70,6 +69,13 @@
         .btn-glow { width: 100%; padding: 18px; background: var(--accent); border: none; border-radius: 4px; color: white; font-weight: 700; cursor: pointer; transition: all 0.3s; text-align: center; display: block; text-decoration: none; font-size: 1.2rem; }
         .btn-glow:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 85, 150, 0.2); }
 
+        /* VIDÉO D'INSTALLATION (FICHIER MP4) */
+        .video-section { padding: 80px 5%; text-align: center; background-color: var(--bg-main); border-top: 1px solid var(--border-color); }
+        .video-section h2 { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
+        .video-section p { color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem; }
+        .video-container { max-width: 800px; margin: 0 auto; border-radius: 6px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid var(--border-color); background: #000; }
+        .video-container video { width: 100%; display: block; }
+
         /* FOOTER */
         footer { background: var(--accent); color: white; text-align: center; padding: 40px 5%; }
         footer p { color: #999; font-size: 0.9rem; }
@@ -77,6 +83,8 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
+            .pricing h2 { font-size: 2rem; }
+            .video-section h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -85,7 +93,6 @@
     <!-- NAVIGATION -->
     <nav>
         <div class="logo-container">
-            <!-- Assurez-vous d'avoir logo.png dans le même dossier que ce fichier HTML -->
             <img src="unnamed.jpg" alt="SFP Logo" onerror="this.style.display='none'">
             <div class="logo-text">
                 <h2>SFP</h2>
@@ -95,6 +102,7 @@
         <div class="nav-links">
             <a href="#features">Fonctionnalités</a>
             <a href="#preview">Aperçu</a>
+            <a href="#installation">Installation</a>
             <a href="#buy" class="btn-buy">Obtenir le logiciel</a>
         </div>
     </nav>
@@ -110,7 +118,6 @@
 
     <!-- APERÇU (SCREENSHOTS) -->
     <section id="preview" class="preview-section">
-        <!-- Mettez une belle capture d'écran de votre logiciel ici -->
         <img src="imagepub1.png" alt="Aperçu du logiciel Stock Forecast Pro" class="preview-img" onerror="this.style.display='none'">
     </section>
 
@@ -155,7 +162,7 @@
             </ul>
 
             <!-- REMPLACEZ LE LIEN CI-DESSOUS PAR VOTRE LIEN GUMROAD OU STRIPE -->
-            <a href="https://buy.stripe.com/5kQ28s0iTfNZgCX5wbaR201">
+            <a href="https://buy.stripe.com/test_dRm7sNfz32mKbO96ZhfYY00" class="btn-glow">
                 <i class="fa-solid fa-lock" style="margin-right: 10px;"></i> Acheter et Télécharger
             </a>
             
@@ -166,6 +173,19 @@
                 <i class="fa-brands fa-cc-paypal"></i>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; font-weight: 500;">Paiement 100% sécurisé.</p>
+        </div>
+    </section>
+
+    <!-- SECTION VIDÉO D'INSTALLATION (FICHIER MP4) -->
+    <section id="installation" class="video-section">
+        <h2>Comment installer le logiciel ?</h2>
+        <p>Regardez ce tutoriel rapide pour voir à quel point l'installation est simple et sécurisée.</p>
+        
+        <div class="video-container">
+            <video controls preload="metadata">
+                <source src="installation.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
         </div>
     </section>
 
